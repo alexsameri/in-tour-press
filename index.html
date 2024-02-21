@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In-tour</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                
+                <ul>
+                    <img src="/images/logo.jpg" class="logo">
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#Sites">Sites</a></li>
+                    <li><a href="#OtherServices">Other services</a></li>
+                    <li><a href="#Contacts">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div id="Home">
+        <div class="sign-in">
+            <button onclick="togglePopup()">Sign-in</button>
+
+            <div class="overlay" id="popup">
+                <div class="popup">
+                    <h3>Sign-in</h3>
+                    <form class="login-form">
+                        <input type="text" name="" id="" placeholder="Username" required>
+                        <input type="password" name="" id="" placeholder="Password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                    <button onclick="togglePopup()">Close</button>
+                    <p>Don't have an account? <a href="#signup" onclick="toggleSignupPopup()">Sign up</a>
+
+
+                    <script>
+                        function togglePopup() {
+                            var popup = document.getElementById("popup");
+                            if (popup.style.visibility === "visible") {
+                                popup.style.visibility = "hidden";
+                                popup.style.opacity = "0";
+                            } else {
+                                popup.style.visibility = "visible";
+                                popup.style.opacity = "1";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    <div id="imageContainer"></div>
+    <script>
+    var imageUrls = [
+        "/images/logo.jpg",
+        "/images/pic1.jpg",
+        "/images/WhatsApp Image 2023-12-13 at 12.29.18_44a67958.jpg",
+        "/images/WhatsApp Image 2023-12-13 at 12.29.18_e0fab906.jpg"
+    ]
+    // Function to create and append suspended images to the container
+    function createSuspendedImages() {
+        var container = document.getElementById("imageContainer");
+    
+        imageUrls.forEach(function(url) {
+            var img = document.createElement("img");
+            img.src = url;
+            img.classList.add("suspended-image");
+            container.appendChild(img);
+        });
+    }
+    
+    // Call the function to create the suspended images
+    createSuspendedImages();
+    </script>
+
+    <div id="Sites">
+        <img src="/images/pic1.jpg" alt="">
+    </div>
+
+    <div id="Otherservices">
+        <img src="/images/logo.jpg" alt="">
+    </div>
+
+    <div id="Contacts">
+        <img src="/images/WhatsApp Image 2023-12-13 at 12.29.18_44a67958.jpg" alt="">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
