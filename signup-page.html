@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Journey into Serenity: Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <script>
+    function validateForm() {
+      var name = document.getElementById("name").value;
+      var email = document.getElementById("email").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirm-password").value;
+      var commands = document.getElementById("commands").value;
+
+      // Check if all fields are filled
+      if (name === "" || email === "" || password === "" || confirmPassword === "" || commands === "") {
+        alert("Please fill in all fields.");
+        return false;
+      }
+
+      // Check if password and confirm password match
+      if (password !== confirmPassword) {
+        alert("Password and Confirm Password do not match.");
+        return false;
+      }
+
+      // Check the number of commands and their presence
+      var commandCount = commands.split(" ").filter(Boolean).length;
+      var requiredCommands = 8; // Set the required number of commands
+
+      if (commandCount !== requiredCommands) {
+        alert("Please enter exactly " + requiredCommands + " commands.");
+        return false;
+      }
+
+      // Check if the default password is used
+      var defaultPassword = "123qwe@!";
+      if (password === defaultPassword) {
+        alert("Please choose a different password.");
+        return false;
+      }
+
+      // Form is valid, allow submission
+      return true;
+    }
+  </script>
+</head>
+<body>
+  <section id="signup-form">
+    <h3>Create an Account</h3>
+    <form action="signup-handler.php" method="post" onsubmit="return validateForm()">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </section>
+
+  <!-- Rest of your HTML content -->
+
+</body>
+</html>

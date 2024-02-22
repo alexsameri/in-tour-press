@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>In-tour</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ac5401daba.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -15,12 +16,13 @@
                     <img src="/images/logo.jpg" class="logo">
                     <li><a href="#Home">Home</a></li>
                     <li><a href="#Sites">Sites</a></li>
-                    <li><a href="#OtherServices">Other services</a></li>
+                    <li><a href="#Services">Services</a></li>
                     <li><a href="#Contacts">Contacts</a></li>
                 </ul>
             </nav>
         </div>
     </div>
+
     <div id="Home">
         <div class="sign-in">
             <button onclick="togglePopup()">Sign-in</button>
@@ -34,7 +36,7 @@
                         <button type="submit">Login</button>
                     </form>
                     <button onclick="togglePopup()">Close</button>
-                    <p>Don't have an account? <a href="#signup" onclick="toggleSignupPopup()">Sign up</a>
+                    <p>Don't have an account? <a href="signup-page.html" onclick="toggleSignupPopup()">Sign up</a>
 
 
                     <script>
@@ -55,10 +57,10 @@
     <div id="imageContainer"></div>
     <script>
     var imageUrls = [
-        "/images/logo.jpg",
+        "/images/pic5.jpg",
         "/images/pic1.jpg",
-        "/images/WhatsApp Image 2023-12-13 at 12.29.18_44a67958.jpg",
-        "/images/WhatsApp Image 2023-12-13 at 12.29.18_e0fab906.jpg"
+        "/images/pic4.jpg",
+        "/images/pic3.jpg"
     ]
     // Function to create and append suspended images to the container
     function createSuspendedImages() {
@@ -75,28 +77,55 @@
     // Call the function to create the suspended images
     createSuspendedImages();
     </script>
-
+    
     <div id="Sites">
-        <img src="/images/pic1.jpg" alt="">
+        <h2>Welcome to In-tour</h2>
+        <h3>Welcome to our tranquil online space</h3>
+        <p>Embark on a mesmerizing journey into serenity and uncover the hidden gems that exist within our world. Let us guide you through an enchanting exploration that will leave you inspired and rejuvenated.</p>
+        <h3>Explore Our Destinations</h3>
+        <p>Step into a realm of natural wonders and cultural treasures as we take you to the most extraordinary places. Discover secluded beaches, majestic mountains, and vibrant cities. Ignite your wanderlust with our curated selection of hidden gems.</p>
+        <h3>Immersive Experiences</h3>
+        <p>Immerse yourself in unforgettable experiences that will awaken your senses and transport you to another realm. Engage in mindful practices, uncover ancient traditions, and delve into the arts, music, and cuisine that reflect the soul of a place. Create lasting memories with our carefully crafted itineraries.</p>
+        <h3>Inspiration for the Soul</h3>
+        <p>Find solace in the stories of those who have discovered serenity. Be inspired by their journeys, their wisdom, and their connection to the hidden gems of our world. Let their experiences guide you towards your own path of tranquility.</p>
+       
+    
     </div>
+    <!-- ---------services------- -->
 
-    <div id="Otherservices">
-        <img src="/images/logo.jpg" alt="">
-    </div>
+    <!-- <section id="services">
+        <h3>Our Services</h3>
+        <div class="slideshow-container">
+          <img src="images/logo.jpg" alt="Service 1">
+          <img src="images/pic2.jpg" alt="Service 2">
+          <img src="images/pic4.jpg" alt="Service 3">
+        </div>
+        <p>Discover our range of services that cater to your every need. From guided tours to wellness retreats, we offer unique experiences that will leave you refreshed and inspired. Let us take care of the details while you focus on immersing yourself in the journey towards serenity.</p>
+    </section> -->
 
+    
+    <!-- --------contact------ -->
+    
     <div id="Contacts">
-        <img src="/images/WhatsApp Image 2023-12-13 at 12.29.18_44a67958.jpg" alt="">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact In-tour administration</h1>
+                    <a href="mailto: in-tour254@gmail.com"> <i class="fa-solid fa-envelopes"></i> Email us</a>
+                    <p><i class="fas fa-phone-square-alt"></i>+254757050357</p>
+                    <p><i class="fas fa-phone-square-alt"></i>+254740622308</p>
+                    <p><i class="fas fa-phone-square-alt"></i>+254790331012</p>
+                    <p><i class="fas fa-phone-square-alt"></i>+254746277520</p>
+                    <p><i class="fas fa-phone-square-alt"></i>+254783692117</p>
+                    <div class="social-icons">
+                        <a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a>
+                        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-
-
-
-
-
-
-
-
-
 
 </body>
 </html>
